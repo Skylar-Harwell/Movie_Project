@@ -1,0 +1,28 @@
+* {
+    color: white;
+    --dark-sienna: #250902ff;
+    --dark-sienna-2: #38040eff;
+    --rosewood: #640d14ff;
+    --ou-crimson-red: #800e13ff;
+    --upsdell-red: #ad2831ff;
+
+}
+
+.hide {
+    display: none;
+}
+
+#search {
+    background-color: var(--ou-crimson-red);
+    color: var(--lightText);
+}
+
+h4 {
+    padding: 5px;
+}
+.searchMovie {
+    background: var(--rosewood);
+    color: var(--lightText);
+    margin: 10px;
+    border-radius: 25px;
+}
