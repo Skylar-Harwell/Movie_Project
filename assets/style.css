@@ -7,6 +7,26 @@
 --darkText: black;
 }
 
+.hide {
+    display: none;
+}
+
+#search {
+    background-color: var(--ou-crimson-red);
+    color: var(--lightText);
+}
+
+h4 {
+    padding: 5px;
+}
+
+.searchMovie {
+    background: var(--rosewood);
+    color: var(--lightText);
+    margin: 10px;
+    border-radius: 25px;
+}
+
 #movieInfoArea{
     color: var(--lightText);
     background-color: var(--upsdell-red);
