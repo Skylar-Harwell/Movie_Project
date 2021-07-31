@@ -1,0 +1,28 @@
+*{--dark-sienna: #250902ff;
+--dark-sienna-2: #38040eff;
+--rosewood: #640d14ff;
+--ou-crimson-red: #800e13ff;
+--upsdell-red: #ad2831ff;
+--lightText: #ffff;
+--darkText: black;
+}
+
+#movieInfoArea{
+    color: var(--lightText);
+    background-color: var(--upsdell-red);
+    /* height: 600px; */
+}
+
+#movieInfo{
+    color: var(--darkText);
+    background-color:white;
+    /* padding: 2px;
+    margin: 5px; */
+}
+
+#moviePoster{
+    color: var(--darkText);
+    background-color: white;
+    margin-bottom: 10px;
+    margin-right: 5px
+}
