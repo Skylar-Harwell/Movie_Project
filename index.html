@@ -7,26 +7,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="assets/style.css">
   </head>
+  
+  <header>
+    <nav class="nav-wrapper transparent">
+      <a href="" class="brand-logo">Logo</a>
+
+    </nav>
+  </header>
+  
   <body>
   <section class="section">
-    <div class="container">
-      <h1 class="title">
-       Movie Search
-      </h1>
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
-      </p>
-    </div>
-    <div class="row">
-        <div class="col s9 card-panel teal lighten-2">
-            <h2>Movie Info</h2>
+     <div class="row">
+        <div id="movieInfoArea" class=" col s9 card-panel lighten-2 row">
+            <h2 id= "infoTitle">Movie Info</h2>
+            <hr/>
+            <p id= "movieInfo" class="col s12">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde magni ipsam excepturi, in vitae mollitia voluptatibus eaque, hic alias quae doloremque consequuntur veritatis iusto officiis et nostrum fugit voluptas aut Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti adipisci numquam repellendus iusto recusandae provident dicta sunt facere molestias soluta? Dolorum tenetur aliquam laudantium, sapiente quis expedita. Cumque, dolores sed lorem</p>
+            <img id="moviePoster" class="col" src="https://m.media-amazon.com/images/I/51FIcCozbUL._AC_.jpg" alt="movie Poster Here">
+            <h3 class= "center-align">Cast</h3>
+            <ul id="actorList" class="center-align">
+              <li>Will Ferrell</li>
+              <li>John C. Reilly</li>
+            </ul>
+            <h3 class= "center-align">Directors</h3>
+            <ul class="center-align">
+                <li>Director 1</li>
+                <li>Director 2</li>
+            </ul>
+            
         </div>
-        <div class="col s3 card-panel teal lighten-1">
-            <div class="card-panel orange lighten-3">
-            <h2>Search area</h2>
+        <div class="col s3" id="search">
+            <div>
+            <h2>Enter a Movie!</h2>
+            <div class="input-field center-align">
+                <input id="last_name" type="text" class="validate">
+              </div>
+              <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right"></i>
+              </button>
             </div>
-            <div class="card-panel orange darken-3">
+            <div class="searchMovie">
             <h4>Related Links</h4>
+            <div>
+                <a class="waves-effect waves-light btn">Actor Names</a>
+            </div>
             </div>
         </div>
         <div class="col s12 card-panel blue lighten-3">
