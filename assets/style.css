@@ -17,23 +17,6 @@
         margin: 0;
       }
 
-header {
-    background: url(/assets/HeaderImage.jpg);
-    background-size: cover;
-    background-position: bottom;
-    min-height: 600px;
-}
-
-@media screen and (max-width 670px){
-    {header}
-    min-height: 500px;
-} 
-
-nav {
-    background: var(--rosewood);
-}
-
-
     #search {
         background-color: var(--ou-crimson-red);
         color: var(--lightText);
