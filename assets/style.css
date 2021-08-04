@@ -1,11 +1,22 @@
 *{--dark-sienna: #250902ff;
---dark-sienna-2: #38040eff;
---rosewood: #640d14ff;
---ou-crimson-red: #800e13ff;
---upsdell-red: #ad2831ff;
---lightText: #ffff;
---darkText: black;
-}
+    --dark-sienna-2: #38040eff;
+    --rosewood: #640d14ff;
+    --ou-crimson-red: #800e13ff;
+    --upsdell-red: #ad2831ff;
+    --lightText: #ffff;
+    --darkText: black;
+    }
+    
+    .hide {
+        display: none;
+    }
+    
+    html, body, h1, h2, h3, h4, h5, h6, div {
+        padding: 0;
+        border: 0;
+        margin: 0;
+      }
+
 
 #movieInfoArea{
     color: var(--lightText);
@@ -27,4 +38,21 @@
     margin-right: 5px
 
 }
+
+
+    #search {
+        background-color: var(--ou-crimson-red);
+        color: var(--lightText);
+    }
+    
+    h4 {
+        padding: 5px;
+    }
+    
+    .searchMovie {
+        background: var(--rosewood);
+        color: var(--lightText);
+        margin: 10px;
+        border-radius: 25px;
+    }
 
