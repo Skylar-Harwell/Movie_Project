@@ -1,4 +1,5 @@
-*{--dark-sienna: #250902ff;
+* {
+    --dark-sienna: #250902ff;
     --dark-sienna-2: #38040eff;
     --rosewood: #640d14ff;
     --ou-crimson-red: #800e13ff;
@@ -7,16 +8,57 @@
     --darkText: black;
     }
     
-    .hide {
-        display: none;
-    }
-    
-    html, body, h1, h2, h3, h4, h5, h6, div {
-        padding: 0;
-        border: 0;
-        margin: 0;
-      }
+.hide {
+    display: none;
+}
 
+html, body, h1, h2, h3, h4, h5, h6, div {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+#search {
+    background-color: var(--ou-crimson-red);
+    color: var(--lightText);
+}
+
+#submitBtn {
+    margin-left: 200px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    background: var(--dark-sienna);
+    color: var(--lightText);
+}
+    
+#movieName {
+    max-width: 80%;
+}
+
+h4 {
+    padding: 5px;
+}
+
+.searchMovie {
+    background: var(--rosewood);
+    color: var(--lightText);
+    margin: 10px;
+    border-radius: 25px;
+    margin-left: 50px;
+    padding: 25px;
+}
+
+.actorNames {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    margin-left: 100px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    background: var(--dark-sienna);
+    color: var(--lightText);
+}
 
 #movieInfoArea{
     color: var(--lightText);
@@ -36,23 +78,4 @@
     background-color: white;
     margin-bottom: 10px;
     margin-right: 5px
-
 }
-
-
-    #search {
-        background-color: var(--ou-crimson-red);
-        color: var(--lightText);
-    }
-    
-    h4 {
-        padding: 5px;
-    }
-    
-    .searchMovie {
-        background: var(--rosewood);
-        color: var(--lightText);
-        margin: 10px;
-        border-radius: 25px;
-    }
-
