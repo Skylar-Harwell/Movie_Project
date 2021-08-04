@@ -17,6 +17,17 @@
         margin: 0;
       }
 
+      header {
+        background: url(/assets/HeaderImage.jpg);
+        background-size: cover;
+        min-height: 500px;
+        background-position: bottom;
+    }
+@media screen and (max-width: 670px){header{
+        min-height: 500px;
+    }
+}
+
     #search {
         background-color: var(--ou-crimson-red);
         color: var(--lightText);

@@ -3,15 +3,32 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+    <title>Georgia Screen</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
   </head>
   
   <header>
     <nav class="nav-wrapper transparent">
-      <a href="" class="brand-logo">Logo</a>
-
+      <div class="container">
+        <a href="" class="sidenav-trigger" data-target="mobile-menu">
+          <i class="material-icons">menu</i>
+        </a>
+        <a href="" class="brand-logo">Georgia Screen</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#"><i class="material-icons">search</i></a></li>
+          <li><a href="#"><i class="material-icons">view_module</i></a></li>
+          <li><a href="#"><i class="material-icons">refresh</i></a></li>
+          <li><a href="#"><i class="material-icons">mail</i></a></li>
+        </ul> 
+        <ul class="sidenav grey lighten-2" id="mobile-menu">
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
   
@@ -57,7 +74,7 @@
     </div>
   </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="assets/script.js"></script>
+  <script src="/assets/script.js"></script>
   </body>
 </html>
 
