@@ -1,3 +1,4 @@
+
 * {
     --dark-sienna: #250902ff;
     --dark-sienna-2: #38040eff;
@@ -12,11 +13,16 @@
     display: none;
 }
 
+
 html, h1, h2, h3, h4, h5, h6, div {
     padding: 0;
     border: 0;
     margin: 0;
-    }
+
+.brand-logo {
+    font-size: 36px;
+}
+
 
 body {
     background: var(--dark-sienna-2);
@@ -31,6 +37,7 @@ body {
     min-height: 500px;
     background-position: bottom;
 }
+  
 @media screen and (max-width: 670px){header{
     min-height: 500px;
 }}
@@ -107,5 +114,5 @@ h4 {
 }
 
 .searchMovie {
-    padding: 25px                                                                                              ;
+    padding: 25px;                                                                                              
 }
