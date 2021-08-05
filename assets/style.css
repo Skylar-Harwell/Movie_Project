@@ -1,3 +1,4 @@
+
 * {
     --dark-sienna: #250902ff;
     --dark-sienna-2: #38040eff;
@@ -27,6 +28,10 @@
 @media screen and (max-width: 670px){header{
         min-height: 500px;
     }
+}
+
+.brand-logo {
+    font-size: 36px;
 }
 
     #search {
