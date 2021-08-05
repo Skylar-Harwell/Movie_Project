@@ -6,72 +6,43 @@
     --upsdell-red: #ad2831ff;
     --lightText: #ffff;
     --darkText: black;
-    }
-    
-    .hide {
-        display: none;
-    }
-    
-    html, body, h1, h2, h3, h4, h5, h6, div {
-        padding: 0;
-        border: 0;
-        margin: 0;
-      }
+}
 
-      header {
-        background: url(/assets/HeaderImage.jpg);
-        background-size: cover;
-        min-height: 500px;
-        background-position: bottom;
+.hide {
+    display: none;
+}
+
+html, h1, h2, h3, h4, h5, h6, div {
+    padding: 0;
+    border: 0;
+    margin: 0;
     }
+
+body {
+    background: var(--dark-sienna-2);
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+    header {
+    background: url(/assets/HeaderImage.jpg);
+    background-size: cover;
+    min-height: 500px;
+    background-position: bottom;
+}
 @media screen and (max-width: 670px){header{
-        min-height: 500px;
-    }
-}
+    min-height: 500px;
+}}
 
-    #search {
-        background-color: var(--ou-crimson-red);
-        color: var(--lightText);
-    }
-    
-    h4 {
-        padding: 5px;
-    }
-    
-    .searchMovie {
-        background: var(--rosewood);
-        color: var(--lightText);
-        margin: 10px;
-        border-radius: 25px;
-    }
-    
-    #movieInfoArea{
-        color: var(--lightText);
-        background-color: var(--upsdell-red);
-        /* height: 600px; */
-    }
-    
-    #movieInfo{
-        color: var(--darkText);
-        background-color:white;
-        /* padding: 2px;
-        margin: 5px; */
-    }
-
-#submitBtn {
-    margin-left: 200px;
-    margin-bottom: 25px;
-    border-radius: 10px;
-    background: var(--dark-sienna);
+#search {
+    background-color: var(--ou-crimson-red);
     color: var(--lightText);
-}
-    
-#movieName {
-    max-width: 80%;
 }
 
 h4 {
     padding: 5px;
+    font-weight: 800;
 }
 
 .searchMovie {
@@ -81,6 +52,46 @@ h4 {
     border-radius: 25px;
     margin-left: 50px;
     padding: 25px;
+}
+
+#movieInfoArea{
+    color: var(--lightText);
+    background-color: var(--upsdell-red);
+    /* height: 600px; */
+}
+
+#movieInfo{
+    color: var(--lightText);
+    font-size: x-large;
+    font-weight: 400;
+    background-color: var(--upsdell-red);
+    
+    /* padding: 2px;
+    margin: 5px; */
+}
+ 
+#movieName {
+    max-width: 80%;
+    font-weight: 800;
+    font-size: xx-large;
+    padding-top: 50px;
+}
+
+#moviePoster{
+    color: var(--darkText);
+    background-color: white;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    padding-left: 100px;
+    background-color: var(--upsdell-red);
+}
+
+#submitBtn {
+    margin-left: 200px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    background: var(--dark-sienna);
+    color: var(--lightText);
 }
 
 .actorNames {
@@ -95,22 +106,6 @@ h4 {
     color: var(--lightText);
 }
 
-#movieInfoArea{
-    color: var(--lightText);
-    background-color: var(--upsdell-red);
-    /* height: 600px; */
-}
-
-#movieInfo{
-    color: var(--darkText);
-    background-color:white;
-    /* padding: 2px;
-    margin: 5px; */
-}
-
-#moviePoster{
-    color: var(--darkText);
-    background-color: white;
-    margin-bottom: 10px;
-    margin-right: 5px
+.searchMovie {
+    padding: 25px                                                                                              ;
 }
