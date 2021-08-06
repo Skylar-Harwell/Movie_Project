@@ -10,9 +10,9 @@ var movieName = document.querySelector("#movieName");
 var submitBtn = document.querySelector("#submitBtn");
 var actorNames = document.querySelector("#actorNames");
 var writerList= document.querySelector(".writerList");
-var releaseDate= document.querySelector("releaseDate");
-var movieGenres= document.querySelector("movieGenres");
-var movieRatings= document.querySelector("movieRatings");
+var releaseDate= document.querySelector(".releaseDate");
+var movieGenres= document.querySelector(".movieGenres");
+var movieRatings= document.querySelector(".movieRatings");
 
 
 submitBtn.addEventListener('click', function() {
@@ -57,10 +57,12 @@ var getMovieInfo = function(data) {
   var title = data.Title;
   var actors = data.Actors;
   var director = data.Director;
-  console.log(data.Title);
+  var imgSrc = data.Poster;
+  var plot = data.Plot;
+  
+  movieInfoArea.classList.remove("hide");
+  moviePoster.src = imgSrc;
 
-  // var titleLine = document.createElement('h2');
-  // titleLine.classList = "col s12"
   var actorField = document.createElement('li');
   actorField.classList = "center-align"
   var directorField = document.createElement('li');
@@ -69,8 +71,8 @@ var getMovieInfo = function(data) {
   infoTitle.innerText = title;
   actorField.innerText = actors;
   directorField.innerText = director;
+  movieInfo.innerText = plot;
 
-  // movieInfoArea.appendChild(titleLine);
   actorList.appendChild(actorField);
   directorList.appendChild(directorField);
 }
