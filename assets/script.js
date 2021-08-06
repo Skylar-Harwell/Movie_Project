@@ -1,3 +1,4 @@
+
 var movieInfoArea = document.querySelector("#movieInfoArea");
 var infoTitle = document.querySelector("#infoTitle");
 var movieInfo = document.querySelector("#movieInfo");
@@ -8,10 +9,16 @@ var search = document.querySelector("#search");
 var movieName = document.querySelector("#movieName");
 var submitBtn = document.querySelector("#submitBtn");
 var actorNames = document.querySelector("#actorNames");
+var writerList= document.querySelector(".writerList");
+var releaseDate= document.querySelector("releaseDate");
+var movieGenres= document.querySelector("movieGenres");
+var movieRatings= document.querySelector("movieRatings");
+
 
 submitBtn.addEventListener('click', function() {
   getMovieSearch(movieName.value);
 });
+
 
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
