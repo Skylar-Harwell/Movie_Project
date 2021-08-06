@@ -8,7 +8,10 @@ const search = document.querySelector(".search");
 const movieName = document.querySelector(".movieName");
 const submitBtn = document.querySelector(".buttons .submitBtn");
 const actorNames = document.querySelector(".buttons .actorNames");
-
+var writerList= document.querySelector(".writerList");
+var releaseDate= document.querySelector("releaseDate");
+var movieGenres= document.querySelector("movieGenres");
+var movieRatings= document.querySelector("movieRatings")
 
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
@@ -21,7 +24,7 @@ var keyOMDB="ea8bbe23";
 var titleSearch='Superman';
 
 // .....OMDB Info....
-// url is http://www.omdbapi.com/?t=[searchParam]&?apikey=[yourkey]&
+// url is http://www.omdbapi.com/?t=[searchParam]&apikey=[yourkey]&
 fetch("http://www.omdbapi.com/?t="+titleSearch+"&apikey="+keyOMDB)
     .then(function(response){
         if(response.status != 200){
