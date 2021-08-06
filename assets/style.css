@@ -32,7 +32,7 @@ body {
     margin: 0;
 }
 
-    header {
+header {
     background: url(/assets/HeaderImage.jpg);
     background-size: cover;
     min-height: 500px;

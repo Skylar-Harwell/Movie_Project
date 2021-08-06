@@ -1,13 +1,13 @@
-const movieInfoArea = document.querySelector("#movieInfoArea");
-const infoTitle = document.querySelector("#infoTitle");
-const movieInfo = document.querySelector("#movieInfo");
-const moviePoster = document.querySelector("#moviePoster");
-const actorList = document.querySelector("#actorList");
-const directorList = document.querySelector("#directorList");
-const search = document.querySelector("#search");
+var movieInfoArea = document.querySelector("#movieInfoArea");
+var infoTitle = document.querySelector("#infoTitle");
+var movieInfo = document.querySelector("#movieInfo");
+var moviePoster = document.querySelector("#moviePoster");
+var actorList = document.querySelector("#actorList");
+var directorList = document.querySelector("#directorList");
+var search = document.querySelector("#search");
 var movieName = document.querySelector("#movieName");
 var submitBtn = document.querySelector("#submitBtn");
-const actorNames = document.querySelector("#actorNames");
+var actorNames = document.querySelector("#actorNames");
 
 submitBtn.addEventListener('click', function() {
   getMovieSearch(movieName.value);
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 var getMovieSearch = function (movieName) { 
 //.....Declaired Global Variable.....\\
 var keyOMDB="ea8bbe23";
-var searchUrl = "http://www.omdbapi.com/?t="+movieName+"&apikey="+keyOMDB;
+const searchUrl = "http://www.omdbapi.com/?t="+movieName+"&plot=full&apikey="+keyOMDB;
 // var titleSearch='Superman';
 
 // .....OMDB Info....
@@ -35,5 +35,35 @@ fetch(searchUrl)
     })
     .then(function(data){
         console.log(data);
+        getMovieInfo(data);
     });
   };
+
+var getMovieName = function () {
+  getMovieSearch($(this)[0].innerHTML);
+  console.log($(this)[0].innerHTML);
+}
+
+
+var getMovieInfo = function(data) {
+  console.log(data);
+  var title = data.Title;
+  var actors = data.Actors;
+  var director = data.Director;
+  console.log(data.Title);
+
+  // var titleLine = document.createElement('h2');
+  // titleLine.classList = "col s12"
+  var actorField = document.createElement('li');
+  actorField.classList = "center-align"
+  var directorField = document.createElement('li');
+  directorField.classList = "center-align";
+
+  infoTitle.innerText = title;
+  actorField.innerText = actors;
+  directorField.innerText = director;
+
+  // movieInfoArea.appendChild(titleLine);
+  actorList.appendChild(actorField);
+  directorList.appendChild(directorField);
+}
