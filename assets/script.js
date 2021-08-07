@@ -50,6 +50,7 @@ fetch(searchUrl)
         getMovieInfo(data);
         addActorBtn(data);
         getStreamLocation(data);
+        // wikiPull();
     });
   };
 
@@ -128,12 +129,14 @@ var addActorBtn = function(data) {
 
 var getStreamLocation = function(data){
   var imdbTag = data.imdbID;
+  var token = config.key;
+  var key = config.host;
   
   fetch("https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/idlookup?source_id=" + imdbTag + "&source=imdb&country=us", {
 	"method": "GET",
 	"headers": {
-		"x-rapidapi-key": "da440e55a7msh96508f347530e4dp1c7d0ejsn0974e10a5fc7",
-		"x-rapidapi-host": "utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com"
+		"x-rapidapi-key": token,
+		"x-rapidapi-host": key
 	}
 })
 .then(function (response) {
