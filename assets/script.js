@@ -16,6 +16,7 @@ var movieRatings= document.querySelector("#movieRatings");
 
 
 submitBtn.addEventListener('click', function() {
+  clearPrevMovInfo();
   getMovieSearch(movieName.value);
 });
 
@@ -95,4 +96,13 @@ var getMovieInfo = function(data) {
   releaseDate.appendChild(releaseField);
   movieRatings.appendChild(ratingField);
   movieGenres.appendChild(genreField);
+}
+
+var clearPrevMovInfo = function () {
+  $('#actorList').empty();
+  $('#directorList').empty();
+  $('#writerList').empty();
+  $('#releaseDate').empty();
+  $('#movieGenres').empty();
+  $('#movieRatings').empty();
 }
