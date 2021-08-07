@@ -8,6 +8,7 @@ var directorList = document.querySelector("#directorList");
 var search = document.querySelector("#search");
 var movieName = document.querySelector("#movieName");
 var submitBtn = document.querySelector("#submitBtn");
+var actorInfo = document.querySelector('.searchMovie');
 var actorNames = document.querySelector("#actorNames");
 var writerList= document.querySelector("#writerList");
 var releaseDate= document.querySelector("#releaseDate");
@@ -44,6 +45,7 @@ fetch(searchUrl)
     .then(function(data){
         console.log(data);
         getMovieInfo(data);
+        addActorBtn(data);
     });
   };
 
@@ -105,4 +107,13 @@ var clearPrevMovInfo = function () {
   $('#releaseDate').empty();
   $('#movieGenres').empty();
   $('#movieRatings').empty();
+}
+
+var addActorBtn = function(data) {
+  console.log(data);
+  var actorNameBtn = data.Actors;
+  var button = document.createElement('button');
+  button.innerHTML = actorNameBtn;
+  button.classList.add('waves-effect', 'waves-light', 'btn', 'actorNames')
+  actorInfo.appendChild(button);
 }
