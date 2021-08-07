@@ -80,13 +80,12 @@ h4 {
 /* search bar area */
 
 #search {
-
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--lightText);
     margin-top: 10px;
     border-radius: 5px;
-    background: linear-Gradient(var(--rosewood), var(--ou-crimson-red));
+    background: var(--rosewood);
     padding: 10px;
 }
 
@@ -163,14 +162,43 @@ h4 {
 /* movie cast */
 
 .searchMovie {
-    background: linear-Gradient(var(--rosewood), var(--ou-crimson-red));
+    background: var(--rosewood);
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--lightText);
     margin-top: 10px;
     border-radius: 5px;
-    background-color: #f2f2f2;
     padding: 10px;
+}
+
+#streamBox, #stream {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background: var(--rosewood);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--lightText);
+    margin-top: 10px;
+    padding: 10px;
+}
+
+#stream {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: solid 5px var(--dark-sienna-2);
+    border-radius: 5px;
+}
+
+#streamBtn {
+    height: 60px;
+    width: 150px;
+    border: solid 2.5px white;
+    border-radius: 5px;
+    background: var(--dark-sienna-2);
+    color: white;
 }
 
 .contactcolumn {
@@ -223,14 +251,13 @@ input[type=text], select, textarea {
 
   /* Style the container/contact section */
   .card-panel-contact {
-    background: linear-Gradient(var(--rosewood), var(--ou-crimson-red));
+    background: var(--rosewood);
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--lightText);
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
-    background-color: #f2f2f2;
     padding: 10px;
 }
 
