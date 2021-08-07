@@ -23,10 +23,10 @@ submitBtn.addEventListener('click', function() {
   getMovieSearch(movieName.value);
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems, options);
-  });
+// document.addEventListener('DOMContentLoaded', function() {
+//     var elems = document.querySelectorAll('.sidenav');
+//     var instances = M.Sidenav.init(elems, options);
+//   });
 
 var getMovieSearch = function (movieName) { 
 //.....Declaired Global Variable.....\\
@@ -122,3 +122,22 @@ var addActorBtn = function(data) {
 // var clearPrevActorBtn = function () {
 //   $('#actorBtn').empty();
 // }
+
+// .....Wikipedia call for more information about the actor.....\\
+
+function wikiPull(data){
+  url="https://en.wikipedia.org/w/api.php?format=json&action=query&origin=*&prop=extracts&exintro&explaintext&redirects=1&titles=";
+  
+  fetch(url)
+    .then(function(response){
+      if(response.status !== 200){
+        console.log("Wikinope")
+      }
+      return response.json();
+    })
+    .then(function(data){
+      bar= Object.values(data.query.pages);
+      console.log(bar[0].extract)
+    });
+};
+
