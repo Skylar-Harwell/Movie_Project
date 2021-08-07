@@ -8,7 +8,8 @@ var directorList = document.querySelector("#directorList");
 var search = document.querySelector("#search");
 var movieName = document.querySelector("#movieName");
 var submitBtn = document.querySelector("#submitBtn");
-var actorInfo = document.querySelector('.searchMovie');
+var searchMovie = document.querySelector('.searchMovie');
+var actorBtn = document.querySelector(".actorBtn");
 var actorNames = document.querySelector("#actorNames");
 var writerList= document.querySelector("#writerList");
 var releaseDate= document.querySelector("#releaseDate");
@@ -18,9 +19,9 @@ var movieRatings= document.querySelector("#movieRatings");
 
 submitBtn.addEventListener('click', function() {
   clearPrevMovInfo();
+  // clearPrevActorBtn();
   getMovieSearch(movieName.value);
 });
-
 
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
@@ -53,7 +54,6 @@ var getMovieName = function () {
   getMovieSearch($(this)[0].innerHTML);
   console.log($(this)[0].innerHTML);
 }
-
 
 var getMovieInfo = function(data) {
   console.log(data);
@@ -107,6 +107,7 @@ var clearPrevMovInfo = function () {
   $('#releaseDate').empty();
   $('#movieGenres').empty();
   $('#movieRatings').empty();
+  $('.actorBtn').empty();
 }
 
 var addActorBtn = function(data) {
@@ -115,5 +116,9 @@ var addActorBtn = function(data) {
   var button = document.createElement('button');
   button.innerHTML = actorNameBtn;
   button.classList.add('waves-effect', 'waves-light', 'btn', 'actorNames')
-  actorInfo.appendChild(button);
+  actorBtn.appendChild(button);
 }
+
+// var clearPrevActorBtn = function () {
+//   $('#actorBtn').empty();
+// }
