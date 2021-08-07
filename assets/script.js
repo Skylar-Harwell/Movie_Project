@@ -15,12 +15,13 @@ var releaseDate= document.querySelector("#releaseDate");
 var movieGenres= document.querySelector("#movieGenres");
 var movieRatings= document.querySelector("#movieRatings");
 var imagePlaceholder = document.querySelector(".imageplaceholder")
+var stream = document.querySelector("#stream");
+var streamBox = document.querySelector('#streamBox');
 
 submitBtn.addEventListener('click', function() {
   imagePlaceholder.classList.add("hide"); 
   clearPrevMovInfo();
   getMovieSearch(movieName.value);
-  makeActorInfoBtn();
 });
 
 
@@ -47,6 +48,7 @@ fetch(searchUrl)
         console.log(data);
         getMovieInfo(data);
         addActorBtn(data);
+        getStreamLocation(data);
     });
   };
 
@@ -141,3 +143,49 @@ function wikiPull(data){
   }
 };
 
+var getStreamLocation = function(data){
+  var imdbTag = data.imdbID;
+  
+  fetch("https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/idlookup?source_id=" + imdbTag + "&source=imdb&country=us", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "da440e55a7msh96508f347530e4dp1c7d0ejsn0974e10a5fc7",
+		"x-rapidapi-host": "utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com"
+	}
+})
+.then(function (response) {
+  if(response.ok) {
+    response.json().then(function (data) {
+      console.log(data.collection.locations[0]);
+      console.log(data);
+    var location = data.collection.locations;
+
+    for (var i = 0; i < location.length; i++) {
+      var streamDiv = document.createElement('div');
+      var streamLocation = document.createElement('h5');
+      var streamURL = document.createElement('p');
+      var streamIcon = 'https://utellyassets7.imgix.net/locations_icons/utelly/black_new/iTunesIVAUS.png?w=92&auto=compress&app_version=c2fa9acc-ef2f-4ca0-a2ce-17f1d45b5093_1e1212w2021-08-07';
+
+      streamBox.classList.remove("hide"); 
+
+      streamDiv.classList = 'searchMovie';
+      streamLocation.classList = 'text';
+      streamLocation.innerText = location[i].display_name;
+      console.log(location[i].display_name);
+      streamURL.innerText = location[i].url;
+
+      streamDiv.appendChild(streamLocation);
+      streamDiv.appendChild(streamURL);
+      stream.appendChild(streamDiv);
+      streamBox.appendChild(stream);
+    }
+
+});
+  } else {
+      alert('Error: ' + response.statusText);
+  }
+})
+.catch(err => {
+	console.error(err);
+});
+}
