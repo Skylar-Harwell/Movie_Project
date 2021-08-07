@@ -34,7 +34,7 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-    header {
+header {
     background: url(/assets/HeaderImg.png);
     background-size: cover;
     min-height: 500px;
@@ -61,6 +61,7 @@ body {
 #search {
     background-color: var(--ou-crimson-red);
     color: var(--lightText);
+    border-radius: 7px;
 }
 
 h4 {
@@ -68,23 +69,15 @@ h4 {
     font-weight: 800;
 }
 
-.searchMovie {
-    background: var(--rosewood);
-    color: var(--lightText);
-    margin: 10px;
-    border-radius: 25px;
-    margin-left: 50px;
-    padding: 25px;
-}
-
 #movieInfoArea{
     color: var(--lightText);
     background-color: var(--upsdell-red);
+    border-radius: 2px;
 }
 
 #infoTitle{
     color: var(--lightText);
-    
+
     font-weight: 800;
     background-color: var(--upsdell-red);
 }
@@ -120,19 +113,31 @@ h4 {
     color: var(--lightText);
 }
 
+#actorNames {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    background: var(--dark-sienna);
+    color: var(--lightText);
+}
+
 .actorNames {
     display: flex;
     flex-direction: row;
     text-align: center;
     align-items: center;
-    margin-left: 100px;
-    margin-bottom: 25px;
     border-radius: 10px;
     background: var(--dark-sienna);
     color: var(--lightText);
 }
 
 .searchMovie {
-    padding: 25px;                                                                                              
+    background: var(--rosewood);
+    color: var(--lightText);
+    margin: 10px;
+    border-radius: 10px;
+    padding: 25px;
 }
 
