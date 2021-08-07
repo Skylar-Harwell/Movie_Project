@@ -13,8 +13,10 @@ var writerList= document.querySelector(".writerList");
 var releaseDate= document.querySelector(".releaseDate");
 var movieGenres= document.querySelector(".movieGenres");
 var movieRatings= document.querySelector(".movieRatings");
+var imagePlaceholder = document.querySelector(".imageplaceholder")
 
 submitBtn.addEventListener('click', function() {
+  imagePlaceholder.classList.add("hide"); 
   getMovieSearch(movieName.value);
 });
 
@@ -23,6 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
     // var instances = M.Sidenav.init(elems, options);
   });
+
+
+
 
 var getMovieSearch = function (movieName) { 
 //.....Declaired Global Variable.....\\
