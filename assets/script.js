@@ -16,7 +16,6 @@ var releaseDate= document.querySelector("#releaseDate");
 var movieGenres= document.querySelector("#movieGenres");
 var movieRatings= document.querySelector("#movieRatings");
 
-
 submitBtn.addEventListener('click', function() {
   clearPrevMovInfo();
   // clearPrevActorBtn();
@@ -25,7 +24,7 @@ submitBtn.addEventListener('click', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems, options);
+    // var instances = M.Sidenav.init(elems, options);
   });
 
 var getMovieSearch = function (movieName) { 
