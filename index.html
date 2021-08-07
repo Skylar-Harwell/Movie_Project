@@ -12,7 +12,6 @@
   </head>
   
  <!-- Navigation bar on top of page with links to sections of page  -->
-
   <div class="navbar">
     <nav class="nav-extended transparent">
     <a href="" class="sidenav-trigger" data-target="mobile-menu">
@@ -21,16 +20,17 @@
       <li><a href="#"><i class="material-icons">search</i></a></li>
       <li><a href="#"><i class="material-icons">question_answer</i></a></li>
       <li><a href="#"><i class="material-icons">refresh</i></a></li>
-      <li><a href="#"><i class="material-icons">mail</i></a></li>
+      <li><a href="#contact_us"><i class="material-icons">mail</i></a></li>
     </ul> 
     <ul class="sidenav grey lighten-2" id="mobile-menu">
       <li><a href="#">Link 1</a></li>
       <li><a href="#">Link 2</a></li>
       <li><a href="#">Link 3</a></li>
-      <li><a href="#">Link 4</a></li>
+      <li><a href="#contact_us">Click here to see the content below.</a></li>
     </ul>
   </nav>
   </div>
+ <!-- End Navigation   -->
 
  <!-- Header -->
   <header>
@@ -40,67 +40,80 @@
         </div>
       </div>
   </header>
+<!-- Header -->
 
-  <body>
+<body>
   <section class="section">
     <div class="imageplaceholder"><img src="" alt="" srcset=""></div>
-        <div id="movieInfoArea" class=" col s9 card-panel lighten-2 row hide">
-            <h2 id="infoTitle"></h2>
-            <hr/>
-            <p id= "movieInfo" class="col s12"></p>
-            <img id="moviePoster" class="col s8" src="" alt="movie Poster Here">
-            <div>
-            <h4 class= "center-align">Cast</h4>
-            <ul id="actorList" class="center-align">            
-              <!-- List of actors will go here -->
-            </ul>
-            <h4 class= "center-align">Directors</h3>
-            <ul id="directorList" class="center-align">
-              <!-- List of directors will go here -->
-            </ul>
-            <h4 class= "center-align">Writers</h3>
-            <ul id="writerList" class="center-align">
-              <!-- List of writers will go here -->
-            </ul>
-            <h4 class= "center-align">Release</h4>
-            <ul id="releaseDate" class="center-align">
-              <!-- List of  will go here -->
-            </ul>
-            <h4 class="center-align">Genres</h4>
-            <ul id="movieGenres" class="center-align">
-              <!-- List of  will go here -->
-            </ul>
-            <h4 class= "center-align">Rating</h4>
-            <ul id="movieRatings" class="center-align">
-              <!-- List of  will go here -->
-            </ul>
-          </div>
-        </div>
-        <div class="col s3" id="search">
-            <div>
-              
-            <!-- <h2>Enter a Movie!</h2> -->
-            <div class="input-field center-align">
-                <input id="movieName" type="text" class="validate" placeholder="Enter a Movie!">
-              </div>
-              <button class="btn waves-effect waves-light" id="submitBtn"  type="submit" name="action">Submit
-                <i class="material-icons right"></i>
-              </button>
-            </div>
-            </div>
-            <div>
-            <div class="searchMovie">
-            <h4>Actor Information</h4>
-            <div class="actorBtn">
-                <!-- <button class="waves-effect waves-light btn actorNames" id="actorNames">Actor Names</button> -->
-            </div>
-            </div>
-            <div class="hide text" id="streamBox">
-              <h4>Where to Stream?</h4>
-            <div id="stream"></div>
-            </div>
-        </div>
+      <div id="movieInfoArea" class=" col s9 card-panel lighten-2 row hide">
+        <h2 id="infoTitle"></h2>
+        <hr/>
+        <p id= "movieInfo" class="col s12"></p>
+        <img id="moviePoster" class="col s8" src="" alt="movie Poster Here">
+        <div>
+        <h4 class= "center-align">Cast</h4>
+        <ul id="actorList" class="center-align">           
+<!-- List of actors will go here -->
+      </ul>
+        <h4 class= "center-align">Directors</h3>
+        <ul id="directorList" class="center-align">
+<!-- List of directors will go here -->
+      </ul>
+        <h4 class= "center-align">Writers</h3>
+        <ul id="writerList" class="center-align">
+<!-- List of writers will go here -->
+        </ul>
+        <h4 class= "center-align">Release</h4>
+        <ul id="releaseDate" class="center-align">
+<!-- List of  will go here -->
+        </ul>
+        <h4 class="center-align">Genres</h4>
+        <ul id="movieGenres" class="center-align">
+<!-- List of  will go here -->
+        </ul>
+        <h4 class= "center-align">Rating</h4>
+        <ul id="movieRatings" class="center-align">
+<!-- List of  will go here -->
+        </ul>
       </div>
+    </div>
+        
+<div class="col s3" id="search">
+  <div>
+<!-- <h2>Enter a Movie!</h2> -->
+    <div class="input-field center-align">
+      <input id="movieName" type="text" class="validate" placeholder="Enter a Movie!">
+    </div>
+        <button class="btn waves-effect waves-light" id="submitBtn"  type="submit" name="action">Submit
+          <i class="material-icons right"></i>
+        </button>
+  </div>
+</div>
+
+<!-- Actor Information -->
+<div>
+  <div class="searchMovie">
+    <h4>Actor Information</h4>
+      <div class="actorBtn">
+<!-- <button class="waves-effect waves-light btn actorNames" id="actorNames">Actor Names</button> -->
+      </div>
+  </div>
+            
+  <div class="hide text" id="streamBox">
+    <h4>Where to Stream?</h4>
+      <div id="stream"></div>
+  </div>
+  </div>
+  </div>
+
+<!-- Contact Us Section   -->
+<a id="contact_us"></a>
+<p>Contact Us Section</p></a>
+<p class="main-content">
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+</p>
+
+  <!--Footer-->
         <footer class="page-footer">
           <div class="container">
             <div class="row">
@@ -150,6 +163,8 @@
     </div>
     
   </section>
+
+<!--Javascript code-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="/assets/script.js"></script>
