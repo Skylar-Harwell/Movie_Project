@@ -34,53 +34,27 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-body, html {
-    height: 100%;
-  }
-
-.hero-image {
-    background-image: url("/assets/HeaderImg.png");
-    height: 75%;
-    background-position: center;
-    background-repeat: no-repeat;
+header {
+    background: url(/assets/HeaderImg.png);
     background-size: cover;
-    position: relative;
-  }
+    min-height: 650px;
+    background-position: bottom;
+    padding: 150px;
+}
   
-  .hero-text {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-  }
-  
-  .hero-text button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 10px 25px;
-    color: black;
-    background-color: #ddd;
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  .hero-text button:hover {
-    background-color: #555;
-    color: white;
-  }
-
-  
-@media screen and (max-width: 670px){.navbar{
+@media screen and (max-width: 670px){header{
     min-height: 500px;
     background-size:auto;
     background-position: bottom;
 }}
 
+.brand-logo {
+    font-size: 36px;
+    justify-content: space-between;
+}
+
 .navbar {
-    min-height: 50px;
+    min-height: 30px;
 }
 
 .searcharea {
@@ -90,6 +64,12 @@ body, html {
     background-size:cover;
     display: flex;
     justify-content: center;
+
+.imageplaceholder {
+  background: url(/assets/placeholdergraphic.png);
+  min-height: 600px;
+  background-position: center;
+  background-size:auto;
 }
 
 #search {
