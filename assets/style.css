@@ -37,9 +37,9 @@ body {
 header {
     background: url(/assets/HeaderImg.png);
     background-size: cover;
-    min-height: 500px;
+    min-height: 650px;
     background-position: bottom;
-    padding: 125px;
+    padding: 150px;
 }
   
 @media screen and (max-width: 670px){header{
@@ -57,6 +57,12 @@ header {
     min-height: 30px;
 }
 
+.imageplaceholder {
+background: url(/assets/placeholdergraphic.png);
+min-height: 600px;
+background-position: center;
+background-size:auto;
+}
 
 #search {
     background-color: var(--ou-crimson-red);
@@ -121,6 +127,15 @@ h4 {
     border-radius: 10px;
     background: var(--dark-sienna);
     color: var(--lightText);
+}
+
+.actorBtn {
+    display: flex;
+    flex-direction: inline;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: 10px;
+    justify-content: space-between;
 }
 
 .actorNames {
