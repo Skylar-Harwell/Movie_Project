@@ -163,7 +163,7 @@ h4 {
 /* movie cast */
 
 .searchMovie {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)), url(/assets/placeholder2.png);
+    background: linear-Gradient(var(--rosewood), var(--ou-crimson-red));
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--lightText);
@@ -223,16 +223,20 @@ input[type=text], select, textarea {
 
   /* Style the container/contact section */
   .card-panel-contact {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)), url(/assets/placeholder2.png);
+    background: linear-Gradient(var(--rosewood), var(--ou-crimson-red));
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--lightText);
     margin-top: 10px;
+    margin-bottom: 10px;
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 10px;
 }
 
+#contactimg{
+    align-items: center;
+}
   
   /* Create two columns that float next to eachother */
   .contactcolumn {
@@ -256,6 +260,10 @@ input[type=text], select, textarea {
       margin-top: 0;
     }
   }
+
+ footer {
+    background: linear-Gradient(var(--rosewood), var(--ou-crimson-red));
+ } 
 
 #footNote, #footerh5{
     text-align: center;
