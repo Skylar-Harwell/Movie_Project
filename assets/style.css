@@ -57,11 +57,19 @@ header {
     min-height: 30px;
 }
 
+.searcharea {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/placeholder2.png);
+    min-height: 100%;
+    background-position: center;
+    background-size:cover;
+    display: flex;
+    justify-content: center;
+
 .imageplaceholder {
-background: url(/assets/placeholdergraphic.png);
-min-height: 600px;
-background-position: center;
-background-size:auto;
+  background: url(/assets/placeholdergraphic.png);
+  min-height: 600px;
+  background-position: center;
+  background-size:auto;
 }
 
 #search {
@@ -96,10 +104,11 @@ h4 {
 }
  
 #movieName {
-    max-width: 80%;
     font-weight: 800;
     font-size: xx-large;
     padding-top: 50px;
+    color: var(--lightText);
+    text-align: center;
 }
 
 #moviePoster{
@@ -114,7 +123,7 @@ h4 {
 }
 
 #submitBtn {
-    margin-left: 200px;
+    margin-left: 175px;
     margin-bottom: 25px;
     border-radius: 10px;
     background: var(--dark-sienna);
@@ -158,15 +167,12 @@ h4 {
     padding: 25px;
 }
 
-
-
 #footNote, #footerh5{
     text-align: center;
 }
+
 .footerlinks{
-    
     min-width: 100%;
-   
 }
 .circle responsive-img{
     width: 20px;
