@@ -52,7 +52,7 @@ header {
 .headerlogo {
     text-align: center;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -69,19 +69,28 @@ header {
     min-height: 50px;
 }
 
-#search {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/placeholder2.png);
-    min-height: 100%;
-    background-position: center;
-    background-size:cover;
-    background-color: var(--ou-crimson-red);
-    color: var(--lightText);
-    border-radius: 7px;
-}
-
 h4 {
     padding: 5px;
     font-weight: 800;
+}
+
+.section {
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--lightText);
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#search {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/placeholder2.png);
+    background-repeat: no-repeat;
+    color: var(--lightText);
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
 }
 
 #movieInfoArea{
@@ -92,16 +101,13 @@ h4 {
 
 #infoTitle{
     color: var(--lightText);
-
     font-weight: 800;
-    background-color: var(--upsdell-red);
 }
 
 #movieInfo {
     color: var(--lightText);
     font-size: x-large;
     font-weight: 400;
-    background-color: var(--upsdell-red);
 }
  
 #movieName {
@@ -113,13 +119,11 @@ h4 {
 
 #moviePoster{
     color: var(--darkText);
-    background-color: white;
     margin-bottom: 10px;
     margin-right: 5px;
     padding-left: 100px;
-    background-color: var(--upsdell-red);
-    max-height: auto;
-    max-width: 800px;
+    max-height: 650px;
+    max-width: 500px;
 }
 
 #submitBtn {
@@ -161,6 +165,7 @@ h4 {
 
 .searchMovie {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/placeholder2.png);
+    background-repeat: no-repeat;
     color: var(--lightText);
     margin: 10px;
     border-radius: 5px;
@@ -168,7 +173,19 @@ h4 {
     padding: 10px;
 }
 
-
+.contactcolumn {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .contactrow:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
 
 input[type=text], select, textarea {
@@ -195,6 +212,8 @@ input[type=text], select, textarea {
   /* Style the container/contact section */
   .card-panel {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/placeholder2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     color: var(--lightText);
     margin: 10px;
     border-radius: 5px;
