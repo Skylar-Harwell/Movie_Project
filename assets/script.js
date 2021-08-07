@@ -21,12 +21,12 @@ var stream = document.querySelector("#stream");
 var streamBox = document.querySelector('#streamBox');
 
 submitBtn.addEventListener('click', function() {
-    searchArea.classList.add("hide"); 
+    // searchArea.classList.add("hide"); 
     // heroImg.classList.add("hide"); 
-    imagePlaceholder.classList.add("hide"); 
     clearPrevMovInfo();
     getMovieSearch(movieName.value)
     // wikiPull();
+});
 
 var getMovieSearch = function (movieName) { 
 //.....Declaired Local Variable.....\\
@@ -109,6 +109,7 @@ var clearPrevMovInfo = function () {
   $('#movieGenres').empty();
   $('#movieRatings').empty();
   $('.actorBtn').empty();
+  $('#stream').empty();
 };
 
 var addActorBtn = function(data) {
@@ -188,4 +189,4 @@ var wikiPull = function (data){
       bar= Object.values(data.query.pages);
       console.log(bar[0].extract)
     });
-};
+}
