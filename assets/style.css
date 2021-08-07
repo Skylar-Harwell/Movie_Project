@@ -54,12 +54,11 @@ header {
 }
 
 .navbar {
-    min-height: 30px;
+    min-height: 50px;
 }
 
 .imageplaceholder {
 background: url(/assets/placeholdergraphic.png);
-min-height: 600px;
 background-position: center;
 background-size:auto;
 }
