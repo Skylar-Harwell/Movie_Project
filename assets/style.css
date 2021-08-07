@@ -109,6 +109,8 @@ h4 {
     margin-right: 5px;
     padding-left: 100px;
     background-color: var(--upsdell-red);
+    max-height: auto;
+    max-width: 800px;
 }
 
 #submitBtn {
@@ -127,6 +129,15 @@ h4 {
     border-radius: 10px;
     background: var(--dark-sienna);
     color: var(--lightText);
+}
+
+.actorBtn {
+    display: flex;
+    flex-direction: inline;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: 10px;
+    justify-content: space-between;
 }
 
 .actorNames {
@@ -161,3 +172,8 @@ h4 {
     width: 20px;
     height: 20px;
 }
+
+.text {
+    color: var(--lightText);
+}
+
