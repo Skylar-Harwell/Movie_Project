@@ -4,21 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Georgia Screen</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
 
   </head>
   
-  <header>
-    <nav class="nav-extended transparent">
-      <div class="container">
-        </a>
-        <a href="#" class="brand-logo center"><img src="/assets/Georgia Screen Title.png"></a>
-      </div>
-    </nav>    
-  </header>
-
   <div class="navbar">
     <nav class="nav-extended transparent">
     <a href="" class="sidenav-trigger" data-target="mobile-menu">
@@ -38,9 +30,25 @@
   </nav>
   </div>
 
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1><a href="#" class="headertitle"><img src="/assets/Georgia Screen Title.png"></a></h1>
+    </div>
+  </div>
+
+
+
+  
+
   <body>
+    
   <section class="section">
-    <div class="imageplaceholder"><img src="" alt="" srcset=""></div>
+
+<!-- placeholder section -->
+
+
+
+
         <div id="movieInfoArea" class=" col s9 card-panel lighten-2 row hide">
             <h2 id="infoTitle"></h2>
             <hr/>
@@ -77,12 +85,19 @@
             <div>
               
             <!-- <h2>Enter a Movie!</h2> -->
-            <div class="input-field center-align">
-                <input id="movieName" type="text" class="validate" placeholder="Enter a Movie!">
+
+            <div class="searcharea">
+              <div class="searcharea-text">
+                <div class="input-field center-align">
+                  <input id="movieName" type="text" class="validate" placeholder="Enter a Movie!">
+                </div>
+                <button class="btn waves-effect waves-light" id="submitBtn"  type="submit" name="action">Submit
+                  <i class="material-icons right"></i>
+                </button>
               </div>
-              <button class="btn waves-effect waves-light" id="submitBtn"  type="submit" name="action">Submit
-                <i class="material-icons right"></i>
-              </button>
+            </div>
+
+            
             </div>
             </div>
             <div>

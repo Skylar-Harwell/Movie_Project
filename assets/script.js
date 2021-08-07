@@ -14,22 +14,19 @@ var writerList= document.querySelector("#writerList");
 var releaseDate= document.querySelector("#releaseDate");
 var movieGenres= document.querySelector("#movieGenres");
 var movieRatings= document.querySelector("#movieRatings");
+var searchArea = document.querySelector(".searcharea");
+var heroImg = document.querySelector(".hero-image");
 var imagePlaceholder = document.querySelector(".imageplaceholder")
 var stream = document.querySelector("#stream");
 var streamBox = document.querySelector('#streamBox');
 
 submitBtn.addEventListener('click', function() {
-  imagePlaceholder.classList.add("hide"); 
-  clearPrevMovInfo();
-  getMovieSearch(movieName.value);
-  wikiPull();
-});
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    // var instances = M.Sidenav.init(elems, options);
-});
+    searchArea.classList.add("hide"); 
+    // heroImg.classList.add("hide"); 
+    imagePlaceholder.classList.add("hide"); 
+    clearPrevMovInfo();
+    getMovieSearch(movieName.value)
+    // wikiPull();
 
 var getMovieSearch = function (movieName) { 
 //.....Declaired Local Variable.....\\

@@ -34,34 +34,60 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-header {
-    background: url(/assets/HeaderImg.png);
+body, html {
+    height: 100%;
+  }
+
+.hero-image {
+    background-image: url("/assets/HeaderImg.png");
+    height: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    min-height: 650px;
-    background-position: bottom;
-    padding: 150px;
-}
+    position: relative;
+  }
   
-@media screen and (max-width: 670px){header{
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  
+  .hero-text button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: black;
+    background-color: #ddd;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .hero-text button:hover {
+    background-color: #555;
+    color: white;
+  }
+
+  
+@media screen and (max-width: 670px){.navbar{
     min-height: 500px;
     background-size:auto;
     background-position: bottom;
 }}
 
-.brand-logo {
-    font-size: 36px;
-    justify-content: space-between;
-}
-
 .navbar {
-    min-height: 30px;
+    min-height: 50px;
 }
 
-.imageplaceholder {
-background: url(/assets/placeholdergraphic.png);
-min-height: 600px;
+.searcharea {
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/placeholder2.png);
+min-height: 100%;
 background-position: center;
-background-size:auto;
+background-size:cover;
 }
 
 #search {
