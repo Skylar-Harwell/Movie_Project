@@ -53,8 +53,8 @@
             <h2 id="infoTitle"></h2>
             <hr/>
             <p id= "movieInfo" class="col s12"></p>
-            <img id="moviePoster" class="col" src="" alt="movie Poster Here">
-
+            <img id="moviePoster" class="col s8" src="" alt="movie Poster Here">
+            <div>
             <h4 class= "center-align">Cast</h4>
             <ul id="actorList" class="center-align">            
               <!-- List of actors will go here -->
@@ -75,10 +75,11 @@
             <ul id="movieGenres" class="center-align">
               <!-- List of  will go here -->
             </ul>
-            <h4 class= "center-align">Rating</h3>
+            <h4 class= "center-align">Rating</h4>
             <ul id="movieRatings" class="center-align">
               <!-- List of  will go here -->
             </ul>
+          </div>
         </div>
         <div class="col s3" id="search">
             <div>
@@ -106,29 +107,55 @@
                 <!-- <button class="waves-effect waves-light btn actorNames" id="actorNames">Actor Names</button> -->
             </div>
             </div>
+            <div class="hide text" id="streamBox">
+              <h4>Where to Stream?</h4>
+            <div id="stream"></div>
+            </div>
         </div>
       </div>
         <footer class="page-footer">
           <div class="container">
             <div class="row">
               <div class="col 16 s12">
-                <h5 class="white-text">Additional Content</h5>
+                <h5 class="white-text" id="footerh5">Additional Content</h5>
                   </div>
               <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
+                <h5 class="white-text" id=""></h5>
+                
+                <p class="footerAddon"></p>
+
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!" id=""></a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!" id=""></a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!" id=""></a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!" id=""></a></li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="footer-copyright">
-            <div class="container">
+            <div class="container" id="footNote">
             © 2021 Copyright Georgia Screen
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            
+            <div class="footerlinks">
+              <br>
+              <div class="footerlinks transparent  z-depth-0">
+                <div class="row valign-wrapper" id="imgFooter">
+                  <div class="col s2">
+                    <img src="images/Facebook.png" alt="" class="circle responsive-img" width="30px"> 
+                   </div>
+                  <div class="col s2">
+                    <img src="images/Instagram.png" alt="" class="circle responsive-img" width="30px"> 
+                   </div>
+                   <div class="col s2">
+                    <img src="images/Twitter.png" alt="" class="circle responsive-img" width="30px"> 
+                   </div>
+                   <div class="col s2">
+                    <img src="images/Wikipedia.png" alt="" class="circle responsive-img" width="30px"> 
+                   </div>
+               </div>
+              </div>
+            </div>
             </div>
           </div>
         </footer>
@@ -139,6 +166,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="/assets/script.js"></script>
   </body>
+  <script src="assets/config.js"></script>
 </html>
 
 <!-- Test Push -->

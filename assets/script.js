@@ -1,4 +1,3 @@
-
 var movieInfoArea = document.querySelector("#movieInfoArea");
 var infoTitle = document.querySelector("#infoTitle");
 var movieInfo = document.querySelector("#movieInfo");
@@ -11,34 +10,28 @@ var submitBtn = document.querySelector("#submitBtn");
 var searchMovie = document.querySelector('.searchMovie');
 var actorBtn = document.querySelector(".actorBtn");
 var actorNames = document.querySelector("#actorNames");
-
 var writerList= document.querySelector("#writerList");
 var releaseDate= document.querySelector("#releaseDate");
 var movieGenres= document.querySelector("#movieGenres");
 var movieRatings= document.querySelector("#movieRatings");
-var searchArea = document.querySelector(".searcharea")
-var heroImg = document.querySelector(".hero-image")
-
-
+var searchArea = document.querySelector(".searcharea");
+var heroImg = document.querySelector(".hero-image");
+var imagePlaceholder = document.querySelector(".imageplaceholder")
+var stream = document.querySelector("#stream");
+var streamBox = document.querySelector('#streamBox');
 
 submitBtn.addEventListener('click', function() {
     searchArea.classList.add("hide"); 
     // heroImg.classList.add("hide"); 
-  clearPrevMovInfo();
-  // clearPrevActorBtn();
-
-  getMovieSearch(movieName.value);
-});
-
-
-
-
+    imagePlaceholder.classList.add("hide"); 
+    clearPrevMovInfo();
+    getMovieSearch(movieName.value)
+    // wikiPull();
 
 var getMovieSearch = function (movieName) { 
-//.....Declaired Global Variable.....\\
+//.....Declaired Local Variable.....\\
 var keyOMDB="ea8bbe23";
 const searchUrl = "http://www.omdbapi.com/?t="+movieName+"&plot=full&apikey="+keyOMDB;
-// var titleSearch='Superman';
 
 // .....OMDB Info....
 // url is http://www.omdbapi.com/?t=[searchParam]&?apikey=[yourkey]&
@@ -53,13 +46,15 @@ fetch(searchUrl)
         console.log(data);
         getMovieInfo(data);
         addActorBtn(data);
+        getStreamLocation(data);
+        // wikiPull();
     });
   };
 
 var getMovieName = function () {
   getMovieSearch($(this)[0].innerHTML);
   console.log($(this)[0].innerHTML);
-}
+};
 
 var getMovieInfo = function(data) {
   console.log(data);
@@ -104,7 +99,7 @@ var getMovieInfo = function(data) {
   releaseDate.appendChild(releaseField);
   movieRatings.appendChild(ratingField);
   movieGenres.appendChild(genreField);
-}
+};
 
 var clearPrevMovInfo = function () {
   $('#actorList').empty();
@@ -114,17 +109,83 @@ var clearPrevMovInfo = function () {
   $('#movieGenres').empty();
   $('#movieRatings').empty();
   $('.actorBtn').empty();
-}
+};
 
 var addActorBtn = function(data) {
-  console.log(data);
-  var actorNameBtn = data.Actors;
-  var button = document.createElement('button');
-  button.innerHTML = actorNameBtn;
-  button.classList.add('waves-effect', 'waves-light', 'btn', 'actorNames')
-  actorBtn.appendChild(button);
+  var name = data.Actors;
+  var myNames = name.split(",");
+  console.log(myNames);
+
+  for (var i = 0; i < myNames.length; i++) {
+    var button = document.createElement('button');
+    button.innerHTML = myNames[i];
+    button.classList.add('waves-effect', 'waves-light', 'btn', 'actorNames')
+    actorBtn.appendChild(button);
+  }
+};
+
+var getStreamLocation = function(data){
+  var imdbTag = data.imdbID;
+  var token = config.key;
+  var key = config.host;
+  
+  fetch("https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/idlookup?source_id=" + imdbTag + "&source=imdb&country=us", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": token,
+		"x-rapidapi-host": key
+	}
+})
+.then(function (response) {
+  if(response.ok) {
+    response.json().then(function (data) {
+      console.log(data.collection.locations[0]);
+      console.log(data);
+    var location = data.collection.locations;
+
+    for (var i = 0; i < location.length; i++) {
+      var streamDiv = document.createElement('div');
+      var streamLocation = document.createElement('h5');
+      var streamURL = document.createElement('p');
+      var streamIcon = 'https://utellyassets7.imgix.net/locations_icons/utelly/black_new/iTunesIVAUS.png?w=92&auto=compress&app_version=c2fa9acc-ef2f-4ca0-a2ce-17f1d45b5093_1e1212w2021-08-07';
+
+      streamBox.classList.remove("hide"); 
+
+      streamDiv.classList = 'searchMovie';
+      streamLocation.classList = 'text';
+      streamLocation.innerText = location[i].display_name;
+      console.log(location[i].display_name);
+      streamURL.innerText = location[i].url;
+
+      streamDiv.appendChild(streamLocation);
+      streamDiv.appendChild(streamURL);
+      stream.appendChild(streamDiv);
+      streamBox.appendChild(stream);
+    }
+
+});
+  } else {
+      alert('Error: ' + response.statusText);
+  }
+})
+.catch(err => {
+	console.error(err);
+});
 }
 
-// var clearPrevActorBtn = function () {
-//   $('#actorBtn').empty();
-// }
+var wikiPull = function (data){
+  
+  url="https://en.wikipedia.org/w/api.php?format=json&action=query&origin=*&prop=extracts&exintro&explaintext&redirects=1&titles=" + actorName;
+  
+  fetch(url)
+    .then(function(response){
+      if(response.status !== 200){
+        console.log("Wikinope")
+      }
+      return response.json();
+    })
+    .then(function(data){
+      bar= Object.values(data.query.pages);
+      console.log(bar[0].extract)
+    });
+};
