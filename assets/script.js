@@ -1,4 +1,3 @@
-
 var movieInfoArea = document.querySelector("#movieInfoArea");
 var infoTitle = document.querySelector("#infoTitle");
 var movieInfo = document.querySelector("#movieInfo");
@@ -11,7 +10,6 @@ var submitBtn = document.querySelector("#submitBtn");
 var searchMovie = document.querySelector('.searchMovie');
 var actorBtn = document.querySelector(".actorBtn");
 var actorNames = document.querySelector("#actorNames");
-
 var writerList= document.querySelector("#writerList");
 var releaseDate= document.querySelector("#releaseDate");
 var movieGenres= document.querySelector("#movieGenres");
@@ -19,26 +17,21 @@ var movieRatings= document.querySelector("#movieRatings");
 var imagePlaceholder = document.querySelector(".imageplaceholder")
 
 submitBtn.addEventListener('click', function() {
-    imagePlaceholder.classList.add("hide"); 
+  imagePlaceholder.classList.add("hide"); 
   clearPrevMovInfo();
-  // clearPrevActorBtn();
-
   getMovieSearch(movieName.value);
+  makeActorInfoBtn();
 });
 
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
     // var instances = M.Sidenav.init(elems, options);
-  });
-
-
-
+});
 
 var getMovieSearch = function (movieName) { 
-//.....Declaired Global Variable.....\\
+//.....Declaired Local Variable.....\\
 var keyOMDB="ea8bbe23";
 const searchUrl = "http://www.omdbapi.com/?t="+movieName+"&plot=full&apikey="+keyOMDB;
-// var titleSearch='Superman';
 
 // .....OMDB Info....
 // url is http://www.omdbapi.com/?t=[searchParam]&?apikey=[yourkey]&
@@ -59,7 +52,7 @@ fetch(searchUrl)
 var getMovieName = function () {
   getMovieSearch($(this)[0].innerHTML);
   console.log($(this)[0].innerHTML);
-}
+};
 
 var getMovieInfo = function(data) {
   console.log(data);
@@ -104,7 +97,7 @@ var getMovieInfo = function(data) {
   releaseDate.appendChild(releaseField);
   movieRatings.appendChild(ratingField);
   movieGenres.appendChild(genreField);
-}
+};
 
 var clearPrevMovInfo = function () {
   $('#actorList').empty();
@@ -114,17 +107,17 @@ var clearPrevMovInfo = function () {
   $('#movieGenres').empty();
   $('#movieRatings').empty();
   $('.actorBtn').empty();
-}
+};
 
 var addActorBtn = function(data) {
-  console.log(data);
-  var actorNameBtn = data.Actors;
-  var button = document.createElement('button');
-  button.innerHTML = actorNameBtn;
-  button.classList.add('waves-effect', 'waves-light', 'btn', 'actorNames')
-  actorBtn.appendChild(button);
-}
+  var name = data.Actors;
+  var myNames = name.split(",");
+  console.log(myNames);
 
-// var clearPrevActorBtn = function () {
-//   $('#actorBtn').empty();
-// }
+  for (var i = 0; i < myNames.length; i++) {
+    var button = document.createElement('button');
+    button.innerHTML = myNames[i];
+    button.classList.add('waves-effect', 'waves-light', 'btn', 'actorNames')
+    actorBtn.appendChild(button);
+  }
+};

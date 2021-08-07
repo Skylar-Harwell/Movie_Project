@@ -129,6 +129,15 @@ h4 {
     color: var(--lightText);
 }
 
+.actorBtn {
+    display: flex;
+    flex-direction: inline;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: 10px;
+    justify-content: space-between;
+}
+
 .actorNames {
     display: flex;
     flex-direction: row;
