@@ -24,6 +24,7 @@ submitBtn.addEventListener('click', function() {
   getMovieSearch(movieName.value);
 });
 
+
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
     // var instances = M.Sidenav.init(elems, options);
@@ -115,6 +116,24 @@ var addActorBtn = function(data) {
   var name = data.Actors;
   var myNames = name.split(",");
   console.log(myNames);
+
+
+
+function wikiPull(data){
+  url="https://en.wikipedia.org/w/api.php?format=json&action=query&origin=*&prop=extracts&exintro&explaintext&redirects=1&titles=";
+  
+  fetch(url)
+    .then(function(response){
+      if(response.status !== 200){
+        console.log("Wikinope")
+      }
+      return response.json();
+    })
+    .then(function(data){
+      bar= Object.values(data.query.pages);
+      console.log(bar[0].extract)
+    });
+};
 
   for (var i = 0; i < myNames.length; i++) {
     var button = document.createElement('button');
