@@ -158,6 +158,22 @@ h4 {
     padding: 25px;
 }
 
+
+
+#footNote, #footerh5{
+    text-align: center;
+}
+.footerlinks{
+    
+    min-width: 100%;
+   
+}
+.circle responsive-img{
+    width: 20px;
+    height: 20px;
+}
+
 .text {
     color: var(--lightText);
 }
+
