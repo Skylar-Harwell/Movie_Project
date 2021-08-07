@@ -9,10 +9,10 @@ var search = document.querySelector("#search");
 var movieName = document.querySelector("#movieName");
 var submitBtn = document.querySelector("#submitBtn");
 var actorNames = document.querySelector("#actorNames");
-var writerList= document.querySelector(".writerList");
-var releaseDate= document.querySelector(".releaseDate");
-var movieGenres= document.querySelector(".movieGenres");
-var movieRatings= document.querySelector(".movieRatings");
+var writerList= document.querySelector("#writerList");
+var releaseDate= document.querySelector("#releaseDate");
+var movieGenres= document.querySelector("#movieGenres");
+var movieRatings= document.querySelector("#movieRatings");
 
 
 submitBtn.addEventListener('click', function() {
@@ -59,6 +59,10 @@ var getMovieInfo = function(data) {
   var director = data.Director;
   var imgSrc = data.Poster;
   var plot = data.Plot;
+  var writer = data.Writer;
+  var release = data.Released;
+  var rating = data.Rated;
+  var genre = data.Genre;
   
   movieInfoArea.classList.remove("hide");
   moviePoster.src = imgSrc;
@@ -67,12 +71,28 @@ var getMovieInfo = function(data) {
   actorField.classList = "center-align"
   var directorField = document.createElement('li');
   directorField.classList = "center-align";
+  var writerField = document.createElement('li');
+  writerField.classList = "center-align";
+  var releaseField = document.createElement('li');
+  releaseField.classList = "center-align";
+  var genreField = document.createElement('li');
+  genreField.classList = "center-align";
+  var ratingField = document.createElement('li');
+  ratingField.classList = "center-align";
 
-  infoTitle.innerText = title;
-  actorField.innerText = actors;
-  directorField.innerText = director;
-  movieInfo.innerText = plot;
-
+  infoTitle.innerHTML = title;
+  movieInfo.innerHTML = plot;
+  actorField.innerHTML = actors;
+  directorField.innerHTML = director;
+  writerField.innerHTML = writer;
+  releaseField.innerHTML = release;
+  ratingField.innerHTML = rating;
+  genreField.innerHTML = genre;
+  
   actorList.appendChild(actorField);
   directorList.appendChild(directorField);
+  writerList.appendChild(writerField);
+  releaseDate.appendChild(releaseField);
+  movieRatings.appendChild(ratingField);
+  movieGenres.appendChild(genreField);
 }
