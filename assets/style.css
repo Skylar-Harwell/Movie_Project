@@ -29,7 +29,6 @@ p {
     font-family: 'Cabin', sans-serif;
 }
 
-
 body {
     background: var(--dark-sienna-2);
     padding: 0;
@@ -40,7 +39,7 @@ body {
 
 body, html {
     height: 100%;
-  }
+}
 
 header {
     background: url(/assets/HeaderImg.png);
@@ -64,9 +63,6 @@ header {
     background-position: bottom;
 }}
 
-
-
-
 h4 {
     padding: 5px;
     font-weight: 800;
@@ -85,7 +81,6 @@ h4 {
     background: transparent;
     color: var(--lightText);
     margin:  5px 25px 0px 25px;
-
 }
 
 #search {
@@ -219,13 +214,12 @@ input{
     padding: 20px;
   }
   
-  /* Clear floats after the columns */
-  .contactrow:after {
+/* Clear floats after the columns */
+.contactrow:after {
     content: "";
     display: table;
     clear: both;
-  }
-
+}
 
 input[type=text], select, textarea {
     width: 100%;
