@@ -207,7 +207,7 @@ function wikiPull(actorClick){
       bar= Object.values(data.query.pages);
       console.log(bar);
       console.log(bar[0].extract)
-      var wikiInfo= bar[0].ectract;
+      var wikiInfo= bar[0].extract;
       if(bar[0].extract == undefined){
         wikiInfo= "No Information Avaliable At This Time";
       };
