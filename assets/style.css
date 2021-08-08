@@ -79,6 +79,15 @@ h4 {
 
 /* search bar area */
 
+.instructions {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: transparent;
+    color: var(--lightText);
+    margin:  5px 25px 0px 25px;
+
+}
+
 #search {
     background-repeat: no-repeat;
     background-size: cover;
@@ -88,6 +97,10 @@ h4 {
     background: var(--rosewood);
     padding: 10px;
 }
+
+input{
+    text-align:center;
+ }
 
 #movieInfoArea{
     color: var(--lightText);
@@ -110,7 +123,7 @@ h4 {
     max-width: 80%;
     font-weight: 800;
     font-size: xx-large;
-    padding-top: 50px;
+    padding: 5px;
 }
 
 #moviePoster{
@@ -123,11 +136,11 @@ h4 {
 }
 
 #submitBtn {
-    margin-left: 200px;
     margin-bottom: 25px;
     border-radius: 10px;
     background: var(--dark-sienna);
     color: var(--lightText);
+    cursor: pointer;
 }
 
 #actorNames {
@@ -186,10 +199,8 @@ h4 {
 
 #stream {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
-    border: solid 5px var(--dark-sienna-2);
-    border-radius: 5px;
 }
 
 #streamBtn {
@@ -239,7 +250,7 @@ input[type=text], select, textarea {
   
   /* styling of movie info box */ 
   .card-panel {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)), url(/assets/placeholder2.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)), url(/assets/stagepic.png);
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--lightText);
@@ -249,9 +260,12 @@ input[type=text], select, textarea {
     padding: 10px;
 }
 
-  /* Style the container/contact section */
+  /* container/contact section */
   .card-panel-contact {
-    background: var(--rosewood);
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(/assets/contactimage.png);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--lightText);
@@ -260,19 +274,19 @@ input[type=text], select, textarea {
     border-radius: 5px;
     padding: 10px;
 }
-
-#contactimg{
-    align-items: center;
-}
   
-  /* Create two columns that float next to eachother */
+  /* adjust columns */
   .contactcolumn {
-    float: left;
-    width: 50%;
+    width: 100%;
     margin-top: 6px;
-    padding: 20px;
+    padding: 10px 350px;
+    color: var(--lightText);
   }
   
+  .contactcolumn textarea, input {
+      color: var(--lightText);
+  }
+
   /* Clear floats after the columns */
   .contactrow:after {
     content: "";

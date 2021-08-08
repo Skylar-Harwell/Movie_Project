@@ -116,12 +116,19 @@
     <a id="searchbar"></a>
     <div>
   <!-- <h2>Enter a Movie!</h2> -->
+  <div class="instructions">
+    <div style="text-align:center">
+      <h2></h2>
+      
       <div class="input-field center-align">
-        <input id="movieName" type="text" class="validate" placeholder="Enter a Movie!">
+        <input id="movieName" type="text" class="validate" placeholder="Type in a movie name to learn more about it!">
       </div>
-          <button class="btn waves-effect waves-light" id="submitBtn"  type="submit" name="action">Submit
-            <i class="material-icons right"></i>
-          </button>
+      <button class="btn waves-effect waves-light" id="submitBtn"  type="submit" name="action">Submit
+        <i class="material-icons right"></i>
+      </button>
+    </div>
+  </div>    
+          
     </div>
   </div>
 <!-- Contact Us Section   -->
@@ -133,21 +140,12 @@
     <p>Ask us a question, or leave us a message:</p>
   </div>
   <div class="contactrow">
-    <div class="contactcolumn center">
-      <img id="contactimg" src="/assets/contactimg.png" style="width:50%">
-    </div>
     <div class="contactcolumn">
       <form action="/action_page.php">
         <label for="fname">First Name</label>
         <input type="text" id="fname" name="firstname" placeholder="Your name..">
         <label for="lname">Last Name</label>
         <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-        <label for="country">Country</label>
-        <select id="country" name="country">
-          <option value="australia">Australia</option>
-          <option value="canada">Canada</option>
-          <option value="usa">USA</option>
-        </select>
         <label for="subject">Subject</label>
         <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
         <input type="submit" value="Submit">
