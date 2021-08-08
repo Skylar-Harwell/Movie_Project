@@ -113,7 +113,7 @@ input{
     font-weight: 800;
 }
 
-#movieInfo {
+#movieInfo, #moreInfoP {
     color: var(--lightText);
     font-size: x-large;
     font-weight: 400;

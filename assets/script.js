@@ -54,7 +54,6 @@ fetch(searchUrl)
         getMovieInfo(data);
         addActorBtn(data);
         getStreamLocation(data);
-        // wikiPull();
     });
   };
 
@@ -129,6 +128,16 @@ var addActorBtn = function(data) {
     button.classList.add('waves-effect', 'waves-light', 'btn', 'actorNames')
     actorBtn.appendChild(button);
   }
+
+  var actorBtnArr= document.querySelectorAll(".actorNames");
+  actorBtnArr.forEach(function(actorbtn,i){
+    actorbtn.addEventListener("click",function(){
+      var actorClick= this.innerText;
+      wikiPull(actorClick);
+    });
+    
+  }); 
+
 };
 
 var getStreamLocation = function(data){
@@ -180,10 +189,12 @@ var getStreamLocation = function(data){
 });
 }
 
-var wikiPull = function (data){
-  
-  url="https://en.wikipedia.org/w/api.php?format=json&action=query&origin=*&prop=extracts&exintro&explaintext&redirects=1&titles=" + actorName;
-  
+function wikiPull(actorClick){
+  actorClick= actorClick.toLowerCase();
+  console.log(actorClick);
+  url="https://en.wikipedia.org/w/api.php?format=json&action=query&origin=*&prop=extracts&exintro&explaintext&redirects=1&titles=" + actorClick;
+  var moreActorInfo= document.querySelector(".moreActorInfo");
+  moreActorInfo.classList.remove("hide");
   fetch(url)
     .then(function(response){
       if(response.status !== 200){
@@ -192,7 +203,17 @@ var wikiPull = function (data){
       return response.json();
     })
     .then(function(data){
+      console.log(data);
       bar= Object.values(data.query.pages);
+      console.log(bar);
       console.log(bar[0].extract)
+      var wikiInfo= bar[0].ectract;
+      if(bar[0].extract == undefined){
+        wikiInfo= "No Information Avaliable At This Time";
+      };
+      console.log(wikiInfo);
+      moreActorInfo.innerHTML="<p id='moreInfoP'class='col s10'>"+wikiInfo+"</p>";
     });
+
+
 };
