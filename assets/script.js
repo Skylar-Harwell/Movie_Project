@@ -18,12 +18,16 @@ var imagePlaceholder = document.querySelector(".imageplaceholder")
 var stream = document.querySelector("#stream");
 var streamBox = document.querySelector('#streamBox');
 
+searchMovie.style.display = "none";
+
 submitBtn.addEventListener('click', function() {
   imagePlaceholder.classList.add("hide"); 
+  searchMovie.style.display = "block";
   clearPrevMovInfo();
   getMovieSearch(movieName.value);
   wikiPull();
 });
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
