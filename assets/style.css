@@ -42,7 +42,7 @@ body, html {
 }
 
 header {
-    background: url(../assets/HeaderImg.png);
+    background: url(HeaderImg.png);
     background-size: cover;
     background-position: bottom;
     padding: 250px;
@@ -244,7 +244,7 @@ input[type=text], select, textarea {
   
   /* styling of movie info box */ 
   .card-panel {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)), url(../assets/stagepic.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)), url(stagepic.png);
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--lightText);
@@ -258,7 +258,9 @@ input[type=text], select, textarea {
   .card-panel-contact {
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../assets/contactimage.png);
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(contactimage.png);
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -317,3 +319,6 @@ input[type=text], select, textarea {
     color: var(--lightText);
 }
 
+#movieInfoP{
+    padding: 5px;
+}

@@ -190,8 +190,16 @@ var getStreamLocation = function(data){
 }
 
 function wikiPull(actorClick){
+  if(actorClick.charAt(0) === " "){
+    actorClick= actorClick.substring(1);
+  }
   actorClick= actorClick.toLowerCase();
-  console.log(actorClick);
+  actorArr= actorClick.split(" ");
+  for(i=0; i<actorArr.length; i++){
+    actorArr[i]= actorArr[i].charAt(0).toUpperCase() + actorArr[i].slice(1);
+  }
+  actorClick= actorArr.join(" ");
+
   url="https://en.wikipedia.org/w/api.php?format=json&action=query&origin=*&prop=extracts&exintro&explaintext&redirects=1&titles=" + actorClick;
   var moreActorInfo= document.querySelector(".moreActorInfo");
   moreActorInfo.classList.remove("hide");
