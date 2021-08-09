@@ -115,6 +115,7 @@ var clearPrevMovInfo = function () {
   $('#movieGenres').empty();
   $('#movieRatings').empty();
   $('.actorBtn').empty();
+  $('.moreActorInfo').empty();
 };
 
 var addActorBtn = function(data) {
@@ -161,20 +162,38 @@ var getStreamLocation = function(data){
 
     for (var i = 0; i < location.length; i++) {
       var streamDiv = document.createElement('div');
-      var streamLocation = document.createElement('h5');
-      var streamURL = document.createElement('p');
-      var streamIcon = 'https://utellyassets7.imgix.net/locations_icons/utelly/black_new/iTunesIVAUS.png?w=92&auto=compress&app_version=c2fa9acc-ef2f-4ca0-a2ce-17f1d45b5093_1e1212w2021-08-07';
+      // var streamLocation = document.createElement('h5');
+      // var streamURL = document.createElement('p');
+      // var streamIcon = 'https://utellyassets7.imgix.net/locations_icons/utelly/black_new/iTunesIVAUS.png?w=92&auto=compress&app_version=c2fa9acc-ef2f-4ca0-a2ce-17f1d45b5093_1e1212w2021-08-07';
+
+      // streamBox.classList.remove("hide"); 
+
+      // streamDiv.classList = 'searchMovie';
+      // streamLocation.classList = 'text';
+      // streamLocation.innerText = location[i].display_name;
+      // console.log(location[i].display_name);
+      // streamURL.innerText = location[i].url;
+
+      // streamDiv.appendChild(streamLocation);
+      // streamDiv.appendChild(streamURL);
+      // stream.appendChild(streamDiv);
+      // streamBox.appendChild(stream);
+      var streamLocation = document.createElement('a');
+      var streamURL = location[i].url;
+      var createIcon = document.createElement('img')
+      var streamIcon = location[i].icon;
 
       streamBox.classList.remove("hide"); 
 
       streamDiv.classList = 'searchMovie';
       streamLocation.classList = 'text';
-      streamLocation.innerText = location[i].display_name;
-      console.log(location[i].display_name);
-      streamURL.innerText = location[i].url;
+      // streamLocation.innerText = location[i].display_name;
+      createIcon.src = streamIcon;
+      streamLocation.href = streamURL;
 
+      streamLocation.appendChild(createIcon);
       streamDiv.appendChild(streamLocation);
-      streamDiv.appendChild(streamURL);
+      // streamDiv.appendChild(createIcon);
       stream.appendChild(streamDiv);
       streamBox.appendChild(stream);
     }
