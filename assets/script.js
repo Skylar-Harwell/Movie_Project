@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 var getMovieSearch = function (movieName) { 
 //.....Declaired Local Variable.....\\
 var keyOMDB="ea8bbe23";
-const searchUrl = "http://www.omdbapi.com/?t="+movieName+"&plot=full&apikey="+keyOMDB;
+const searchUrl = "https://www.omdbapi.com/?t="+movieName+"&plot=full&apikey="+keyOMDB;
 
 // .....OMDB Info....
 // url is http://www.omdbapi.com/?t=[searchParam]&?apikey=[yourkey]&
