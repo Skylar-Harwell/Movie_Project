@@ -135,8 +135,12 @@ input{
     font-size: xx-large;
     padding: 5px;
     background-color: rgba(0, 0, 0, 0); border-color: rgba(0, 0, 0, 0)
-
+    
 }
+
+
+
+
 
 #moviePoster{
     color: var(--darkText);
@@ -344,7 +348,7 @@ footer img {
 /* Resize footer images */
 @media screen and (max-width: 640px) {
     footer img {
-        transform: scale(0.6) 
+        transform: scale(1.25) 
     }}
 
 
