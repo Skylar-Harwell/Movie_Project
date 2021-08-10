@@ -171,12 +171,14 @@ input{
     padding-left: 100px;
     padding-right: 100px;
     margin: 10px;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .actorNames {
     display: flex;
     flex-direction: row;
+    
     text-align: center;
     align-items: center;
     border-radius: 10px;
@@ -335,7 +337,7 @@ footer img {
 }
 
 #logo {
-    height: 150px;
+    height: 125px;
     width: auto;
 }
 
