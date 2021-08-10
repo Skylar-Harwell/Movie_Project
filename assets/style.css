@@ -222,19 +222,26 @@ input{
     color: white;
 }
 
-.contactcolumn {
-    float: left;
-    width: 50%;
-    margin-top: 6px;
-    padding: 20px;
+
+  .contactrow {
+      align-self: center;
+    max-width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+    .contactrow {
+        align-self: center;
+        max-width: 100%;
+    }
   }
-  
+
 /* Clear floats after the columns */
 .contactrow:after {
     content: "";
     display: table;
     clear: both;
 }
+
 
 input[type=text], select, textarea {
     width: 100%;
@@ -315,12 +322,28 @@ input[type=text], select, textarea {
 
  footer {
     background: linear-Gradient(var(--rosewood), var(--ou-crimson-red));
- } 
 
-#footNote, #footerh5{
-    text-align: center;
+} 
+
+footer img {
+    height: 40px;
+    width: 40px;
 }
-.footerlinks{
+
+#logo {
+    height: 150px;
+    width: auto;
+}
+
+/* Resize footer images */
+@media screen and (max-width: 640px) {
+    footer img {
+        transform: scale(0.6) 
+    }}
+
+
+
+/* .footerlinks{
     
     min-width: 100%;
    
@@ -328,7 +351,7 @@ input[type=text], select, textarea {
 .circle responsive-img{
     width: 20px;
     height: 20px;
-}
+} */
 
 .text {
     color: var(--lightText);
