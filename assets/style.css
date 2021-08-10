@@ -134,7 +134,13 @@ input{
     font-weight: 800;
     font-size: xx-large;
     padding: 5px;
+    background-color: rgba(0, 0, 0, 0); border-color: rgba(0, 0, 0, 0)
+    
 }
+
+
+
+
 
 #moviePoster{
     color: var(--darkText);
@@ -169,12 +175,14 @@ input{
     padding-left: 100px;
     padding-right: 100px;
     margin: 10px;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .actorNames {
     display: flex;
     flex-direction: row;
+    
     text-align: center;
     align-items: center;
     border-radius: 10px;
@@ -222,19 +230,26 @@ input{
     color: white;
 }
 
-.contactcolumn {
-    float: left;
-    width: 50%;
-    margin-top: 6px;
-    padding: 20px;
+
+  .contactrow {
+      align-self: center;
+    max-width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+    .contactrow {
+        align-self: center;
+        max-width: 100%;
+    }
   }
-  
+
 /* Clear floats after the columns */
 .contactrow:after {
     content: "";
     display: table;
     clear: both;
 }
+
 
 input[type=text], select, textarea {
     width: 100%;
@@ -304,6 +319,8 @@ input[type=text], select, textarea {
     display: table;
     clear: both;
   }
+
+
   
   /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
@@ -315,12 +332,28 @@ input[type=text], select, textarea {
 
  footer {
     background: linear-Gradient(var(--rosewood), var(--ou-crimson-red));
- } 
 
-#footNote, #footerh5{
-    text-align: center;
+} 
+
+footer img {
+    height: 40px;
+    width: 40px;
 }
-.footerlinks{
+
+#logo {
+    height: 125px;
+    width: auto;
+}
+
+/* Resize footer images */
+@media screen and (max-width: 640px) {
+    footer img {
+        transform: scale(1.25) 
+    }}
+
+
+
+/* .footerlinks{
     
     min-width: 100%;
    
@@ -328,7 +361,7 @@ input[type=text], select, textarea {
 .circle responsive-img{
     width: 20px;
     height: 20px;
-}
+} */
 
 .text {
     color: var(--lightText);
